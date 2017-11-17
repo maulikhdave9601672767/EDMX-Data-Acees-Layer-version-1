@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JPRModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="JPREntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="jpr_AdStatusMaster" EntityType="JPRModel.jpr_AdStatusMaster" />
+    <EntitySet Name="jpr_CompanyNameMaster" EntityType="JPRModel.jpr_CompanyNameMaster" />
+    <EntitySet Name="jpr_CountyLetterReceive" EntityType="JPRModel.jpr_CountyLetterReceive" />
+    <EntitySet Name="jpr_CountyMaster" EntityType="JPRModel.jpr_CountyMaster" />
+    <EntitySet Name="jpr_GovtFillingMaster" EntityType="JPRModel.jpr_GovtFillingMaster" />
+    <EntitySet Name="jpr_NewspaperMaster" EntityType="JPRModel.jpr_NewspaperMaster" />
+    <EntitySet Name="jpr_Parent" EntityType="JPRModel.jpr_Parent" />
+    <EntitySet Name="jpr_SendCountyClerk" EntityType="JPRModel.jpr_SendCountyClerk" />
+    <EntitySet Name="jpr_SendStateClerk" EntityType="JPRModel.jpr_SendStateClerk" />
+    <EntitySet Name="jpr_StateMaster" EntityType="JPRModel.jpr_StateMaster" />
+    <EntitySet Name="jpr_StatusMaster" EntityType="JPRModel.jpr_StatusMaster" />
+    <EntitySet Name="jpr_VendorMaster" EntityType="JPRModel.jpr_VendorMaster" />
+    <EntitySet Name="tqfs_child" EntityType="JPRModel.tqfs_child" />
+    <AssociationSet Name="FK_tqfs_child_tqfs_child1" Association="JPRModel.FK_tqfs_child_tqfs_child1">
+      <End Role="jpr_Parent" EntitySet="jpr_Parent" />
+      <End Role="tqfs_child" EntitySet="tqfs_child" />
+    </AssociationSet>
+    <FunctionImport Name="GetClientInformation" ReturnType="Collection(JPRModel.GetClientInformation_Result)" />
+    <FunctionImport Name="spCompanyLists">
+      <Parameter Name="pUserID" Mode="In" Type="Int32" />
+      <Parameter Name="pStatusID" Mode="In" Type="Int32" />
+      <Parameter Name="pClientName" Mode="In" Type="String" />
+      <Parameter Name="pUserName" Mode="In" Type="String" />
+      <Parameter Name="pCountyName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetGenerateAdDetails" ReturnType="Collection(JPRModel.spGetGenerateAdDetails_Result)">
+      <Parameter Name="pCompanyID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetCartByUserID" ReturnType="Collection(JPRModel.GetCartByUserID_Result)">
+      <Parameter Name="userid" Mode="In" Type="Int64" />
+      <Parameter Name="comid" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <EntitySet Name="jpr_ServiceMaster" EntityType="JPRModel.jpr_ServiceMaster" />
+    <EntitySet Name="jpr_CompanyStatusMapping" EntityType="JPRModel.jpr_CompanyStatusMapping" />
+    <EntitySet Name="jpr_AdMaster" EntityType="JPRModel.jpr_AdMaster" />
+    <EntitySet Name="jpr_ClientMaster" EntityType="JPRModel.jpr_ClientMaster" />
+    <FunctionImport Name="GetCompanyList">
+      <Parameter Name="pUserID" Mode="In" Type="Int32" />
+      <Parameter Name="pStatusID" Mode="In" Type="Int32" />
+      <Parameter Name="pClientName" Mode="In" Type="String" />
+      <Parameter Name="pUserName" Mode="In" Type="String" />
+      <Parameter Name="pCountyName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spCompanyLists_Result" ReturnType="Collection(JPRModel.spCompanyLists_Result)">
+      <Parameter Name="pUserID" Mode="In" Type="Int32" />
+      <Parameter Name="pStatusID" Mode="In" Type="Int32" />
+      <Parameter Name="pClientName" Mode="In" Type="String" />
+      <Parameter Name="pUserName" Mode="In" Type="String" />
+      <Parameter Name="pCountyName" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="jpr_UserMaster" EntityType="JPRModel.jpr_UserMaster" />
+    <EntitySet Name="jpr_ReceiveReceiptMaster" EntityType="JPRModel.jpr_ReceiveReceiptMaster" />
+    <EntitySet Name="jpr_ordersubmitjpr" EntityType="JPRModel.jpr_ordersubmitjpr" />
+    <EntitySet Name="jpr_ArticleMaster" EntityType="JPRModel.jpr_ArticleMaster" />
+    <EntitySet Name="jpr_Payment" EntityType="JPRModel.jpr_Payment" />
+    <FunctionImport Name="SP_RenewList_Result">
+      <Parameter Name="Today" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="SP_CheckEmail_Result">
+      <Parameter Name="Today" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_DeleteCompanyDetail">
+      <Parameter Name="companyId" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="SP_RenewList_ResultNew">
+      <Parameter Name="Today" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="SP_RenewList_ResultNew1">
+      <Parameter Name="Today" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="SP_RenewList_ResultNew2">
+      <Parameter Name="Today" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="SP_CheckEmail_ResultNew" ReturnType="Collection(JPRModel.SP_CheckEmail_Result)">
+      <Parameter Name="Today" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="SP_RenewList_ResultNew3" ReturnType="Collection(JPRModel.SP_RenewList_Result)">
+      <Parameter Name="Today" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="jpr_AffidavitMaster" EntityType="JPRModel.jpr_AffidavitMaster" />
+    <EntitySet Name="jpr_CompanyMaster" EntityType="JPRModel.jpr_CompanyMaster" />
+  </EntityContainer>
+  <EntityType Name="jpr_AdStatusMaster">
+    <Key>
+      <PropertyRef Name="AdStatusID" />
+    </Key>
+    <Property Name="AdStatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StatusName" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="jpr_CompanyNameMaster">
+    <Key>
+      <PropertyRef Name="CompanyNameID" />
+    </Key>
+    <Property Name="CompanyNameID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyID" Type="Int32" />
+    <Property Name="CompanyName" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="Status" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ApprovedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="jpr_CountyLetterReceive">
+    <Key>
+      <PropertyRef Name="CountyletterReceivetID" />
+    </Key>
+    <Property Name="CountyletterReceivetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyID" Type="Int32" />
+    <Property Name="CountyLetterName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="ReceiveBy" Type="Int32" />
+    <Property Name="ReceiveDate" Type="DateTime" />
+    <Property Name="CreatedDate" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="jpr_CountyMaster">
+    <Key>
+      <PropertyRef Name="CountyID" />
+    </Key>
+    <Property Name="CountyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StateID" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Name" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="State" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Zip" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Fax" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Price" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Type="String" Name="ClearkName" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ClearkEmail" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="jpr_GovtFillingMaster">
+    <Key>
+      <PropertyRef Name="GovtFillingID" />
+    </Key>
+    <Property Name="GovtFillingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyID" Type="Int32" />
+    <Property Name="GovtFillingName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="ReceiveBy" Type="Int32" />
+    <Property Name="ReceiveDate" Type="DateTime" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Type="String" Name="IsSentOriginalCopy" />
+  </EntityType>
+  <EntityType Name="jpr_NewspaperMaster">
+    <Key>
+      <PropertyRef Name="NewspaperID" />
+    </Key>
+    <Property Name="NewspaperID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="StateID" Type="Int32" />
+    <Property Name="Zip" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Fax" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdon" Type="DateTime" />
+    <Property Type="String" Name="PublishDay" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DeadlineDay" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="jpr_Parent">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="tqfs_child" Relationship="JPRModel.FK_tqfs_child_tqfs_child1" FromRole="jpr_Parent" ToRole="tqfs_child" />
+  </EntityType>
+  <EntityType Name="jpr_SendCountyClerk">
+    <Key>
+      <PropertyRef Name="SendCountyClerkID" />
+    </Key>
+    <Property Name="SendCountyClerkID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReceiveReceiptID" Type="Int32" />
+    <Property Name="SendDate" Type="DateTime" />
+    <Property Name="SendBy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="jpr_SendStateClerk">
+    <Key>
+      <PropertyRef Name="SendStateClerkID" />
+    </Key>
+    <Property Name="SendStateClerkID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ArticleID" Type="Int32" />
+    <Property Name="SenderDate" Type="DateTime" />
+    <Property Name="SendBy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="jpr_StateMaster">
+    <Key>
+      <PropertyRef Name="StateID" />
+    </Key>
+    <Property Name="StateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ContactNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Fax" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdon" Type="DateTime" />
+    <Property Type="String" Name="Email" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="jpr_StatusMaster">
+    <Key>
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="StatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="createdon" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="jpr_VendorMaster">
+    <Key>
+      <PropertyRef Name="VendorID" />
+    </Key>
+    <Property Name="VendorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="StateID" Type="Int32" />
+    <Property Name="Zip" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Fax" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdon" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tqfs_child">
+    <Key>
+      <PropertyRef Name="ChildID" />
+    </Key>
+    <Property Name="ChildID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PhoneNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="EmailID" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="jpr_Parent" Relationship="JPRModel.FK_tqfs_child_tqfs_child1" FromRole="tqfs_child" ToRole="jpr_Parent" />
+  </EntityType>
+  <Association Name="FK_tqfs_child_tqfs_child1">
+    <End Role="jpr_Parent" Type="JPRModel.jpr_Parent" Multiplicity="0..1" />
+    <End Role="tqfs_child" Type="JPRModel.tqfs_child" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="jpr_Parent">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tqfs_child">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="GetClientInformation_Result">
+    <Property Type="Int32" Name="clientid" Nullable="false" />
+    <Property Type="String" Name="code" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="clname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="address" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="city" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="zip" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="fax" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="coname" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="coaddress" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="cocity" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="costate" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spGetGenerateAdDetails_Result">
+    <Property Type="Int32" Name="OrderNo" Nullable="false" />
+    <Property Type="String" Name="AdName" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="DateOfRun" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DeadlineDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Comment" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="CountyLetter" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="GenerateAd" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="StatusName" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="AdID" Nullable="false" />
+    <Property Type="Int32" Name="NewspaperID" Nullable="true" />
+    <Property Type="Int32" Name="AdStatusID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetCartByUserID_Result">
+    <Property Type="String" Name="servicetype" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="price" Nullable="true" Precision="19" />
+    <Property Type="String" Name="CountyName" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <EntityType Name="jpr_ServiceMaster">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="name" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="jpr_CompanyStatusMapping">
+    <Key>
+      <PropertyRef Name="CompanyStatusID" />
+    </Key>
+    <Property Type="Int32" Name="CompanyStatusID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CompanyID" />
+    <Property Type="Int32" Name="StatusID" />
+    <Property Type="Int32" Name="StatusUpdateBy" />
+    <Property Type="DateTime" Name="createdon" />
+  </EntityType>
+  <EntityType Name="jpr_AdMaster">
+    <Key>
+      <PropertyRef Name="AdID" />
+    </Key>
+    <Property Type="Int32" Name="AdID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="OrderNo" Nullable="false" />
+    <Property Type="String" Name="AdName" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="DateTime" Name="DateOfRun" />
+    <Property Type="DateTime" Name="DeadlineDate" />
+    <Property Type="Int32" Name="NewspaperID" />
+    <Property Type="Int32" Name="CompanyID" />
+    <Property Type="String" Name="Comment" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="AdStatusID" />
+    <Property Type="String" Name="CountyLetter" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GenerateAd" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AutoGeneratedAd" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CreatedOn" />
+    <Property Type="Int32" Name="CreatedBy" />
+  </EntityType>
+  <EntityType Name="jpr_ClientMaster">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Type="Int32" Name="ClientID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="UserID" />
+    <Property Type="String" Name="Code" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LastName" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address2" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="StateID" />
+    <Property Type="String" Name="Zip" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Phone" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Fax" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CreatedOn" />
+  </EntityType>
+  <ComplexType Name="spCompanyLists_Result">
+    <Property Type="Int32" Name="CompanyID" Nullable="false" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="250" />
+    <Property Type="Int64" Name="OrderNo" Nullable="true" />
+    <Property Type="String" Name="ContactNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="fax" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ServiceType" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CountyName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Price" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="clearkname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ClearkEmail" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="statusid" Nullable="false" />
+    <Property Type="String" Name="ClientName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="stateemail" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="clientID" Nullable="false" />
+    <Property Type="String" Name="SelectedCompanyName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="clientaddress" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="UserName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <EntityType Name="jpr_UserMaster">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Type="Int32" Name="UserID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Password" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="createdon" />
+    <Property Type="Boolean" Name="Active" />
+    <Property Type="Boolean" Name="IsAutoRenew" />
+  </EntityType>
+  <EntityType Name="jpr_ReceiveReceiptMaster">
+    <Key>
+      <PropertyRef Name="ReceiveReceiptID" />
+    </Key>
+    <Property Type="Int32" Name="ReceiveReceiptID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CompanyID" />
+    <Property Type="DateTime" Name="ReceiveDate" />
+    <Property Type="String" Name="ReceiptName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ReceiveBy" />
+    <Property Type="DateTime" Name="CreatedOn" />
+    <Property Type="String" Name="Status" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RejectReason" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="jpr_ordersubmitjpr">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="Companyid" />
+    <Property Type="Boolean" Name="IsOrderSubmited" />
+    <Property Type="String" Name="Doc1" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Doc2" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Doc3" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Receipt" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="OrderNo" />
+    <Property Type="DateTime" Name="CreatedOn" />
+  </EntityType>
+  <EntityType Name="jpr_ArticleMaster">
+    <Key>
+      <PropertyRef Name="ArticleID" />
+    </Key>
+    <Property Type="Int32" Name="ArticleID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CompanyID" />
+    <Property Type="String" Name="CompanyName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ClientName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ClientAddress" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CountyName" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ClearkName" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CompanyEmail" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CompanyContactNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CompanyFax" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IncorporationDoc" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Doc2" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="createdon" />
+    <Property Type="String" Name="Doc3" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsAprove" />
+  </EntityType>
+  <EntityType Name="jpr_Payment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="cardno" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="cardtype" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="totalprice" Precision="19" Scale="4" />
+    <Property Type="String" Name="transcationid" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="companyid" />
+    <Property Type="Int64" Name="userid" />
+    <Property Type="String" Name="securitycode" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExpMonth" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExpYear" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="SP_CheckEmail_Result">
+    <Property Type="Int32" Name="CompanyID" Nullable="false" />
+    <Property Type="Int32" Name="UserID" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ServiceType" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="CountyID" Nullable="false" />
+    <Property Type="Int32" Name="StatusID" Nullable="false" />
+    <Property Type="DateTime" Name="Createdon" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Price" Nullable="true" Precision="19" />
+    <Property Type="Int64" Name="ClientID" Nullable="true" />
+    <Property Type="String" Name="ContactEmail" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="Organizer" Nullable="true" MaxLength="Max" />
+    <Property Type="Int64" Name="OrderNo" Nullable="true" />
+    <Property Type="String" Name="LLCAddress" Nullable="true" MaxLength="Max" />
+    <Property Type="DateTime" Name="RenewDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EmailDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsEmail" Nullable="true" />
+    <Property Type="Boolean" Name="IsFirstTime" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_RenewList_Result">
+    <Property Type="DateTime" Name="RenDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="userid" Nullable="true" />
+    <Property Type="Int32" Name="companyid" Nullable="false" />
+    <Property Type="Decimal" Name="totalprice" Nullable="true" Precision="19" />
+    <Property Type="String" Name="cardno" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="seccode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="carttype" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Expyear" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Expmm" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="NewDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <EntityType Name="jpr_AffidavitMaster">
+    <Key>
+      <PropertyRef Name="AffidavitId" />
+    </Key>
+    <Property Type="Int32" Name="AffidavitId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CompanyID" />
+    <Property Type="Int32" Name="NewspaperID" />
+    <Property Type="String" Name="AffidavitName" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CoverPage" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CertificationOfPublication" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ReceiveBy" />
+    <Property Type="DateTime" Name="ReceiveDate" />
+    <Property Type="DateTime" Name="CreatedDate" />
+  </EntityType>
+  <EntityType Name="jpr_CompanyMaster">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+    </Key>
+    <Property Type="Int32" Name="CompanyID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="UserID" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ServiceType" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CountyID" Nullable="false" />
+    <Property Type="Int32" Name="StatusID" Nullable="false" />
+    <Property Type="DateTime" Name="Createdon" />
+    <Property Type="Decimal" Name="Price" Precision="19" Scale="4" />
+    <Property Type="Int64" Name="ClientID" />
+    <Property Type="String" Name="ContactEmail" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Organizer" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="OrderNo" />
+    <Property Type="String" Name="LLCAddress" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="RenewDate" />
+    <Property Type="DateTime" Name="EmailDate" />
+    <Property Type="Boolean" Name="IsEmail" />
+    <Property Type="Boolean" Name="IsFirstTime" />
+    <Property Type="String" Name="RAName" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RAEmail" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RAPhone" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RAAddress" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

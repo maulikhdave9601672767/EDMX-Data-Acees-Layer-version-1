@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JPRModelStoreContainer" CdmEntityContainer="JPREntities">
+    <EntitySetMapping Name="jpr_AdStatusMaster">
+      <EntityTypeMapping TypeName="JPRModel.jpr_AdStatusMaster">
+        <MappingFragment StoreEntitySet="jpr_AdStatusMaster">
+          <ScalarProperty Name="AdStatusID" ColumnName="AdStatusID" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jpr_CompanyNameMaster">
+      <EntityTypeMapping TypeName="JPRModel.jpr_CompanyNameMaster">
+        <MappingFragment StoreEntitySet="jpr_CompanyNameMaster">
+          <ScalarProperty Name="CompanyNameID" ColumnName="CompanyNameID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jpr_CountyLetterReceive">
+      <EntityTypeMapping TypeName="JPRModel.jpr_CountyLetterReceive">
+        <MappingFragment StoreEntitySet="jpr_CountyLetterReceive">
+          <ScalarProperty Name="CountyletterReceivetID" ColumnName="CountyletterReceivetID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="CountyLetterName" ColumnName="CountyLetterName" />
+          <ScalarProperty Name="ReceiveBy" ColumnName="ReceiveBy" />
+          <ScalarProperty Name="ReceiveDate" ColumnName="ReceiveDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jpr_CountyMaster">
+      <EntityTypeMapping TypeName="JPRModel.jpr_CountyMaster">
+        <MappingFragment StoreEntitySet="jpr_CountyMaster">
+          <ScalarProperty Name="ClearkEmail" ColumnName="ClearkEmail" />
+          <ScalarProperty Name="ClearkName" ColumnName="ClearkName" />
+          <ScalarProperty Name="CountyID" ColumnName="CountyID" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jpr_GovtFillingMaster">
+      <EntityTypeMapping TypeName="JPRModel.jpr_GovtFillingMaster">
+        <MappingFragment StoreEntitySet="jpr_GovtFillingMaster">
+          <ScalarProperty Name="IsSentOriginalCopy" ColumnName="IsSentOriginalCopy" />
+          <ScalarProperty Name="GovtFillingID" ColumnName="GovtFillingID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="GovtFillingName" ColumnName="GovtFillingName" />
+          <ScalarProperty Name="ReceiveBy" ColumnName="ReceiveBy" />
+          <ScalarProperty Name="ReceiveDate" ColumnName="ReceiveDate" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jpr_NewspaperMaster">
+      <EntityTypeMapping TypeName="JPRModel.jpr_NewspaperMaster">
+        <MappingFragment StoreEntitySet="jpr_NewspaperMaster">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DeadlineDay" ColumnName="DeadlineDay" />
+          <ScalarProperty Name="PublishDay" ColumnName="PublishDay" />
+          <ScalarProperty Name="NewspaperID" ColumnName="NewspaperID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jpr_Parent">
+      <EntityTypeMapping TypeName="JPRModel.jpr_Parent">
+        <MappingFragment StoreEntitySet="jpr_Parent">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jpr_SendCountyClerk">
+      <EntityTypeMapping TypeName="JPRModel.jpr_SendCountyClerk">
+        <MappingFragment StoreEntitySet="jpr_SendCountyClerk">
+          <ScalarProperty Name="SendCountyClerkID" ColumnName="SendCountyClerkID" />
+          <ScalarProperty Name="ReceiveReceiptID" ColumnName="ReceiveReceiptID" />
+          <ScalarProperty Name="SendDate" ColumnName="SendDate" />
+          <ScalarProperty Name="SendBy" ColumnName="SendBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jpr_SendStateClerk">
+      <EntityTypeMapping TypeName="JPRModel.jpr_SendStateClerk">
+        <MappingFragment StoreEntitySet="jpr_SendStateClerk">
+          <ScalarProperty Name="SendStateClerkID" ColumnName="SendStateClerkID" />
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+          <ScalarProperty Name="SenderDate" ColumnName="SenderDate" />
+          <ScalarProperty Name="SendBy" ColumnName="SendBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jpr_StateMaster">
+      <EntityTypeMapping TypeName="JPRModel.jpr_StateMaster">
+        <MappingFragment StoreEntitySet="jpr_StateMaster">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jpr_StatusMaster">
+      <EntityTypeMapping TypeName="JPRModel.jpr_StatusMaster">
+        <MappingFragment StoreEntitySet="jpr_StatusMaster">
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jpr_VendorMaster">
+      <EntityTypeMapping TypeName="JPRModel.jpr_VendorMaster">
+        <MappingFragment StoreEntitySet="jpr_VendorMaster">
+          <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tqfs_child">
+      <EntityTypeMapping TypeName="JPRModel.tqfs_child">
+        <MappingFragment StoreEntitySet="tqfs_child">
+          <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetClientInformation" FunctionName="JPRModel.Store.GetClientInformation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="JPRModel.GetClientInformation_Result">
+          <ScalarProperty Name="clientid" ColumnName="clientid" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="clname" ColumnName="clname" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="fax" ColumnName="fax" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="coname" ColumnName="coname" />
+          <ScalarProperty Name="coaddress" ColumnName="coaddress" />
+          <ScalarProperty Name="cocity" ColumnName="cocity" />
+          <ScalarProperty Name="costate" ColumnName="costate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetGenerateAdDetails" FunctionName="JPRModel.Store.spGetGenerateAdDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="JPRModel.spGetGenerateAdDetails_Result">
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="AdName" ColumnName="AdName" />
+          <ScalarProperty Name="DateOfRun" ColumnName="DateOfRun" />
+          <ScalarProperty Name="DeadlineDate" ColumnName="DeadlineDate" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="CountyLetter" ColumnName="CountyLetter" />
+          <ScalarProperty Name="GenerateAd" ColumnName="GenerateAd" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="AdID" ColumnName="AdID" />
+          <ScalarProperty Name="NewspaperID" ColumnName="NewspaperID" />
+          <ScalarProperty Name="AdStatusID" ColumnName="AdStatusID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCartByUserID" FunctionName="JPRModel.Store.GetCartByUserID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="JPRModel.GetCartByUserID_Result">
+          <ScalarProperty Name="servicetype" ColumnName="servicetype" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="CountyName" ColumnName="CountyName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="jpr_ServiceMaster">
+      <EntityTypeMapping TypeName="JPRModel.jpr_ServiceMaster">
+        <MappingFragment StoreEntitySet="jpr_ServiceMaster">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jpr_CompanyStatusMapping">
+      <EntityTypeMapping TypeName="JPRModel.jpr_CompanyStatusMapping">
+        <MappingFragment StoreEntitySet="jpr_CompanyStatusMapping">
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+          <ScalarProperty Name="StatusUpdateBy" ColumnName="StatusUpdateBy" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="CompanyStatusID" ColumnName="CompanyStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jpr_AdMaster">
+      <EntityTypeMapping TypeName="JPRModel.jpr_AdMaster">
+        <MappingFragment StoreEntitySet="jpr_AdMaster">
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="AutoGeneratedAd" ColumnName="AutoGeneratedAd" />
+          <ScalarProperty Name="GenerateAd" ColumnName="GenerateAd" />
+          <ScalarProperty Name="CountyLetter" ColumnName="CountyLetter" />
+          <ScalarProperty Name="AdStatusID" ColumnName="AdStatusID" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="NewspaperID" ColumnName="NewspaperID" />
+          <ScalarProperty Name="DeadlineDate" ColumnName="DeadlineDate" />
+          <ScalarProperty Name="DateOfRun" ColumnName="DateOfRun" />
+          <ScalarProperty Name="AdName" ColumnName="AdName" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="AdID" ColumnName="AdID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jpr_ClientMaster">
+      <EntityTypeMapping TypeName="JPRModel.jpr_ClientMaster">
+        <MappingFragment StoreEntitySet="jpr_ClientMaster">
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spCompanyLists_Result" FunctionName="JPRModel.Store.spCompanyLists">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="JPRModel.spCompanyLists_Result">
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="fax" ColumnName="fax" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="CountyName" ColumnName="CountyName" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="clearkname" ColumnName="clearkname" />
+          <ScalarProperty Name="ClearkEmail" ColumnName="ClearkEmail" />
+          <ScalarProperty Name="statusid" ColumnName="statusid" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="stateemail" ColumnName="stateemail" />
+          <ScalarProperty Name="clientID" ColumnName="clientID" />
+          <ScalarProperty Name="SelectedCompanyName" ColumnName="SelectedCompanyName" />
+          <ScalarProperty Name="clientaddress" ColumnName="clientaddress" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="jpr_UserMaster">
+      <EntityTypeMapping TypeName="JPRModel.jpr_UserMaster">
+        <MappingFragment StoreEntitySet="jpr_UserMaster">
+          <ScalarProperty Name="IsAutoRenew" ColumnName="IsAutoRenew" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jpr_ReceiveReceiptMaster">
+      <EntityTypeMapping TypeName="JPRModel.jpr_ReceiveReceiptMaster">
+        <MappingFragment StoreEntitySet="jpr_ReceiveReceiptMaster">
+          <ScalarProperty Name="RejectReason" ColumnName="RejectReason" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ReceiveBy" ColumnName="ReceiveBy" />
+          <ScalarProperty Name="ReceiptName" ColumnName="ReceiptName" />
+          <ScalarProperty Name="ReceiveDate" ColumnName="ReceiveDate" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="ReceiveReceiptID" ColumnName="ReceiveReceiptID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jpr_ordersubmitjpr">
+      <EntityTypeMapping TypeName="JPRModel.jpr_ordersubmitjpr">
+        <MappingFragment StoreEntitySet="jpr_ordersubmitjpr">
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="Receipt" ColumnName="Receipt" />
+          <ScalarProperty Name="Doc3" ColumnName="Doc3" />
+          <ScalarProperty Name="Doc2" ColumnName="Doc2" />
+          <ScalarProperty Name="Doc1" ColumnName="Doc1" />
+          <ScalarProperty Name="IsOrderSubmited" ColumnName="IsOrderSubmited" />
+          <ScalarProperty Name="Companyid" ColumnName="Companyid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jpr_ArticleMaster">
+      <EntityTypeMapping TypeName="JPRModel.jpr_ArticleMaster">
+        <MappingFragment StoreEntitySet="jpr_ArticleMaster">
+          <ScalarProperty Name="IsAprove" ColumnName="IsAprove" />
+          <ScalarProperty Name="Doc3" ColumnName="Doc3" />
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+          <ScalarProperty Name="Doc2" ColumnName="Doc2" />
+          <ScalarProperty Name="IncorporationDoc" ColumnName="IncorporationDoc" />
+          <ScalarProperty Name="CompanyFax" ColumnName="CompanyFax" />
+          <ScalarProperty Name="CompanyContactNo" ColumnName="CompanyContactNo" />
+          <ScalarProperty Name="CompanyEmail" ColumnName="CompanyEmail" />
+          <ScalarProperty Name="ClearkName" ColumnName="ClearkName" />
+          <ScalarProperty Name="CountyName" ColumnName="CountyName" />
+          <ScalarProperty Name="ClientAddress" ColumnName="ClientAddress" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jpr_Payment">
+      <EntityTypeMapping TypeName="JPRModel.jpr_Payment">
+        <MappingFragment StoreEntitySet="jpr_Payment">
+          <ScalarProperty Name="ExpYear" ColumnName="ExpYear" />
+          <ScalarProperty Name="ExpMonth" ColumnName="ExpMonth" />
+          <ScalarProperty Name="securitycode" ColumnName="securitycode" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="transcationid" ColumnName="transcationid" />
+          <ScalarProperty Name="totalprice" ColumnName="totalprice" />
+          <ScalarProperty Name="cardtype" ColumnName="cardtype" />
+          <ScalarProperty Name="cardno" ColumnName="cardno" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Sp_DeleteCompanyDetail" FunctionName="JPRModel.Store.SP_DeleteCompanyDetail" />
+    <FunctionImportMapping FunctionImportName="SP_CheckEmail_ResultNew" FunctionName="JPRModel.Store.SP_CheckEmail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="JPRModel.SP_CheckEmail_Result">
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="CountyID" ColumnName="CountyID" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="Createdon" ColumnName="Createdon" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Organizer" ColumnName="Organizer" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="LLCAddress" ColumnName="LLCAddress" />
+          <ScalarProperty Name="RenewDate" ColumnName="RenewDate" />
+          <ScalarProperty Name="EmailDate" ColumnName="EmailDate" />
+          <ScalarProperty Name="IsEmail" ColumnName="IsEmail" />
+          <ScalarProperty Name="IsFirstTime" ColumnName="IsFirstTime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_RenewList_ResultNew3" FunctionName="JPRModel.Store.SP_RenewList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="JPRModel.SP_RenewList_Result">
+          <ScalarProperty Name="RenDate" ColumnName="RenDate" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="totalprice" ColumnName="totalprice" />
+          <ScalarProperty Name="cardno" ColumnName="cardno" />
+          <ScalarProperty Name="seccode" ColumnName="seccode" />
+          <ScalarProperty Name="carttype" ColumnName="carttype" />
+          <ScalarProperty Name="Expyear" ColumnName="Expyear" />
+          <ScalarProperty Name="Expmm" ColumnName="Expmm" />
+          <ScalarProperty Name="NewDate" ColumnName="NewDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="jpr_AffidavitMaster">
+      <EntityTypeMapping TypeName="JPRModel.jpr_AffidavitMaster">
+        <MappingFragment StoreEntitySet="jpr_AffidavitMaster">
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ReceiveDate" ColumnName="ReceiveDate" />
+          <ScalarProperty Name="ReceiveBy" ColumnName="ReceiveBy" />
+          <ScalarProperty Name="CertificationOfPublication" ColumnName="CertificationOfPublication" />
+          <ScalarProperty Name="CoverPage" ColumnName="CoverPage" />
+          <ScalarProperty Name="AffidavitName" ColumnName="AffidavitName" />
+          <ScalarProperty Name="NewspaperID" ColumnName="NewspaperID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="AffidavitId" ColumnName="AffidavitId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jpr_CompanyMaster">
+      <EntityTypeMapping TypeName="JPRModel.jpr_CompanyMaster">
+        <MappingFragment StoreEntitySet="jpr_CompanyMaster">
+          <ScalarProperty Name="RAAddress" ColumnName="RAAddress" />
+          <ScalarProperty Name="RAPhone" ColumnName="RAPhone" />
+          <ScalarProperty Name="RAEmail" ColumnName="RAEmail" />
+          <ScalarProperty Name="RAName" ColumnName="RAName" />
+          <ScalarProperty Name="IsFirstTime" ColumnName="IsFirstTime" />
+          <ScalarProperty Name="IsEmail" ColumnName="IsEmail" />
+          <ScalarProperty Name="EmailDate" ColumnName="EmailDate" />
+          <ScalarProperty Name="RenewDate" ColumnName="RenewDate" />
+          <ScalarProperty Name="LLCAddress" ColumnName="LLCAddress" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="Organizer" ColumnName="Organizer" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Createdon" ColumnName="Createdon" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="CountyID" ColumnName="CountyID" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,12 @@
+D:\Mayur\Projects\JP&R\E-commerce\Code\EdmxLibrary\bin\Debug\EdmxLibrary.dll.config
+D:\Mayur\Projects\JP&R\E-commerce\Code\EdmxLibrary\bin\Debug\EdmxLibrary.dll
+D:\Mayur\Projects\JP&R\E-commerce\Code\EdmxLibrary\bin\Debug\EdmxLibrary.pdb
+D:\Mayur\Projects\JP&R\E-commerce\Code\EdmxLibrary\obj\Debug\ResolveAssemblyReference.cache
+D:\Mayur\Projects\JP&R\E-commerce\Code\EdmxLibrary\obj\Debug\EdmxLibrary.dll
+D:\Mayur\Projects\JP&R\E-commerce\Code\EdmxLibrary\obj\Debug\EdmxLibrary.pdb
+D:\Ankit\JPR\COD\EdmxLibrary\bin\Debug\EdmxLibrary.dll.config
+D:\Ankit\JPR\COD\EdmxLibrary\bin\Debug\EdmxLibrary.dll
+D:\Ankit\JPR\COD\EdmxLibrary\bin\Debug\EdmxLibrary.pdb
+D:\Ankit\JPR\COD\EdmxLibrary\obj\Debug\ResolveAssemblyReference.cache
+D:\Ankit\JPR\COD\EdmxLibrary\obj\Debug\EdmxLibrary.dll
+D:\Ankit\JPR\COD\EdmxLibrary\obj\Debug\EdmxLibrary.pdb
